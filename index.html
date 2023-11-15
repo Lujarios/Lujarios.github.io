@@ -4,7 +4,12 @@
 <head>
     <style>
         body {
-            /* Additional styling for the body, if needed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
 
         /* Apply specified styles to the SVG asset */
@@ -15,15 +20,7 @@
         }
 
         /* Apply specified typography styles to the content */
-        h1 {
-            color: #B40000;
-            font-family: Inknut Antiqua;
-            font-size: 48px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-
+        h1,
         p {
             color: #B40000;
             font-family: Inknut Antiqua;
@@ -31,7 +28,8 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            /* Additional styling for the paragraph, if needed */
+            text-align: center; /* Center text within the elements */
+            margin: 10px 0; /* Add some margin for better spacing */
         }
     </style>
 </head>
