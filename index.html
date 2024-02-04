@@ -5,25 +5,57 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: white;
-        }
-
-        /* Apply specified styles to the SVG asset */
-        svg {
-            width: 222px;
-            height: 263px;
+            background-color: rgb(169, 222, 255);
+            background-image: url("./assets/heart.png");
+            background-repeat: repeat;
+            background-size: 50px 50px;
+            background-position: 50px 50px;
+            background-origin: content-box;
+            background-clip: content-box;
         }
     </style>
+    <script>
+        function removeButton() {
+            var button = document.getElementById("noButton");
+            button.remove();
+        }
+
+        function changeText() {
+            var text = document.getElementById("valentineText");
+            text.innerHTML = "That's not an option!!";
+        }
+
+        function denialGifChange() {
+            var gif = document.getElementById("catGif");
+            gif.src = "./assets/denialGif.gif";
+        }
+
+        function yippieGifChange() {
+            var gif = document.getElementById("catGif");
+            gif.src = "./assets/yippieGif.gif";
+            var text = document.getElementById("valentineText");
+            text.innerHTML = "Yippie!!";
+            var yesButton = document.getElementById("yesButton");
+            var noButton = document.getElementById("noButton");
+            yesButton.remove();
+            noButton.remove();
+        }
+
+    </script>
 </head>
 
 <body>
-    <!-- Replace SVG asset with embedded GIF -->
-    <iframe src="https://giphy.com/embed/sNPeJFq6YNEvLZdcqX" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-    <p><a href="https://giphy.com/gifs/love-heart-tutimon-sNPeJFq6YNEvLZdcqX">via GIPHY</a></p>
+    <h1 style="text-align: center; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, -1px 0px 5px #fff, 0px -1px 5px #fff, 1px 0px 5px #fff, 0px 1px 5px #fff; color: rgb(137, 37, 37); font-weight: bold;" id="valentineText">Will you be my valentine?</h1>
+    <img src="./assets/catLoveLauncher.gif" width="300" height="300" class="giphy-embed" id="catGif" style="border: 10px solid white;" allowFullScreen>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <button style="background-color: rgb(255, 137, 130); margin-right: 20px; width: 100px; height: 40px; font-size: 16px; font-weight: bold;" onclick="removeButton(); changeText(); denialGifChange();" id="noButton">No</button>
+        <button style="background-color: rgb(108, 250, 108); width: 100px; height: 40px; font-size: 16px; font-weight: bold;" onclick="yippieGifChange();" id="yesButton">Yes</button>
+    </div>
 </body>
 
 </html>
