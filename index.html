@@ -20,19 +20,14 @@
         }
     </style>
     <script>
-        function removeButton() {
-            var button = document.getElementById("noButton");
-            button.remove();
-        }
-
-        function changeText() {
-            var text = document.getElementById("valentineText");
-            text.innerHTML = "That's not an option!!";
-        }
 
         function denialGifChange() {
             var gif = document.getElementById("catGif");
             gif.src = "./assets/denialGif.gif";
+            var text = document.getElementById("valentineText");
+            text.innerHTML = "That's not an option!!";
+            var button = document.getElementById("noButton");
+            button.remove();
         }
 
         function yippieGifChange() {
@@ -53,7 +48,7 @@
     <h1 style="text-align: center; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, -1px 0px 5px #fff, 0px -1px 5px #fff, 1px 0px 5px #fff, 0px 1px 5px #fff; color: rgb(137, 37, 37); font-weight: bold;" id="valentineText">Will you be my valentine?</h1>
     <img src="./assets/catLoveLauncher.gif" width="300" height="300" class="giphy-embed" id="catGif" style="border: 10px solid white;" allowFullScreen>
     <div style="display: flex; justify-content: center; margin-top: 20px;">
-        <button style="background-color: rgb(255, 137, 130); margin-right: 20px; width: 100px; height: 40px; font-size: 16px; font-weight: bold;" onclick="removeButton(); changeText(); denialGifChange();" id="noButton">No</button>
+        <button style="background-color: rgb(255, 137, 130); margin-right: 20px; width: 100px; height: 40px; font-size: 16px; font-weight: bold;" onclick="denialGifChange();" id="noButton">No</button>
         <button style="background-color: rgb(108, 250, 108); width: 100px; height: 40px; font-size: 16px; font-weight: bold;" onclick="yippieGifChange();" id="yesButton">Yes</button>
     </div>
 </body>
