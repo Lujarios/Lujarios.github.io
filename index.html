@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <style>
         body {
@@ -10,41 +9,68 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: rgb(169, 222, 255);
+            background-color: #0F1F26;
         }
     </style>
-    <script>
-
-        function denialGifChange() {
-            var gif = document.getElementById("catGif");
-            gif.src = "./assets/denialGif.gif";
-            var text = document.getElementById("valentineText");
-            text.innerHTML = "That's not an option!!";
-            var button = document.getElementById("noButton");
-            button.remove();
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/Poppins.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Container for buttons */
+        .nav-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;            /* Enables flexbox for horizontal layout */
+            gap: 25px;                /* Adds 25px space between buttons */
+            flex-direction: row;      /* Ensures the buttons are in a row */
+            justify-content: flex-end; /* Aligns the buttons to the right */
         }
 
-        function yippieGifChange() {
-            var gif = document.getElementById("catGif");
-            gif.src = "./assets/yippieGif.gif";
-            var text = document.getElementById("valentineText");
-            text.innerHTML = "Yippie!!";
-            var yesButton = document.getElementById("yesButton");
-            var noButton = document.getElementById("noButton");
-            yesButton.remove();
-            noButton.remove();
+        /* Button styles */
+        .nav-button {
+            width: 105px;
+            height: 35px;
+            background-color: #73683B;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 35px;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
 
-    </script>
+        /* Drop shadow for the current page's button */
+        .current-page {
+            box-shadow: 0px 0px 38px 9px rgba(88, 62, 35, 0.4);
+        }
+
+        /* Button hover effect */
+        .nav-button:hover {
+            opacity: 0.8;
+        }
+    </style>
+    <title>Navigation Buttons</title>
 </head>
 
 <body>
-    <h1 style="text-align: center; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, -1px 0px 5px #fff, 0px -1px 5px #fff, 1px 0px 5px #fff, 0px 1px 5px #fff; color: rgb(137, 37, 37); font-weight: bold;" id="valentineText">Will you be my valentine?</h1>
-    <img src="./assets/catLoveLauncher.gif" width="300" height="300" class="giphy-embed" id="catGif" style="border: 10px solid white;" allowFullScreen>
-    <div style="display: flex; justify-content: center; margin-top: 20px;">
-        <button style="background-color: rgb(255, 137, 130); margin-right: 20px; width: 100px; height: 40px; font-size: 16px; font-weight: bold;" onclick="denialGifChange();" id="noButton">No</button>
-        <button style="background-color: rgb(108, 250, 108); width: 100px; height: 40px; font-size: 16px; font-weight: bold;" onclick="yippieGifChange();" id="yesButton">Yes</button>
+    <div class="nav-buttons">
+        <a href="home.html" class="nav-button current-page">Home</a>
+        <a href="about.html" class="nav-button">About</a>
+        <a href="portfolio.html" class="nav-button">Portfolio</a>
     </div>
+    <h1 class="poppins-regular" style="color: #fff ;font-size: 64px; position: absolute; bottom: 40px; left: 60px; margin: 20px;" id="Intro_Text">
+        I'm Luca, a<br>&ltSoftware Engineering Student&gt
+    </h1>
+
+    <img src="./assets/web-development.png" width="300" height="300" class="giphy-embed" id="WevDevPNG">
 </body>
 
 </html>
